@@ -79,7 +79,22 @@ def saveinfile():
     return
 
 def capturefromfile():
-    print "No yet implemented"
+    cap = cv2.VideoCapture('capture/video/capture.avi')
+
+    while True:
+        ret, frame = cap.read()
+        font = cv2.FONT_HERSHEY_DUPLEX
+        cv2.putText(frame,'Jonathan',(10,180), font, 4,(255,255,255),2,cv2.cv.CV_INTER_LINEAR)
+
+        cv2.imshow('readfile', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+print
+print "===================="
+print " Choose one option: "
+print "===================="
+print
 
 op = raw_input("(camera|save|file): ")
 if op == 'camera':
