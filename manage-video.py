@@ -61,7 +61,7 @@ def capturefromcamera():
 def saveinfile():
     cap = cv2.VideoCapture(0)
 
-    #Define the codec and create ViweoWriter object
+    # Define the codec and create ViweoWriter object
     fourcc = cv2.cv.CV_FOURCC(*'XVID')
     out = cv2.VideoWriter('capture/video/capture.avi', fourcc, 20.0, (640, 480))
     while True:
